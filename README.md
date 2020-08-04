@@ -250,11 +250,31 @@ origin  https://github.com/blowle/GitUsage.git (push)
 
 ![현재 작업 중인 브랜치를 가리키는 HEAD](https://git-scm.com/book/en/v2/images/head-to-master.png)
 
-
-
 ### 브랜치 이동하기
 
-
-
 ​	Command : `git checkout testing`
+
+
+
+## 브랜치와 Merge의 기초
+
+### 예시) fix 브랜치 후 병합과정
+
+* 시나리오
+  * 새로운 이슈를 처리할 새 브랜치 생성.
+  * 새로 만든 브랜치에서 진행.
+  * 새로운 이슈를 처리하기 이전의 운영 브랜치로 이동.
+  * Hotfix 브랜치 하나 생성.
+  * 수정한 Hotfix 테스트를 마치고 운영 브랜치로 병합.
+  * 다시 작업하던 브랜치로 이동 후 일 진행.
+
+<img src="https://git-scm.com/book/en/v2/images/basic-branching-1.png" alt="현재 커밋 히스토리" style="zoom: 50%;" />
+
+<img src="https://git-scm.com/book/en/v2/images/basic-branching-2.png" alt="브랜치 포인터를 새로 만듦" style="zoom:50%;" />
+
+<img src="https://git-scm.com/book/en/v2/images/basic-branching-3.png" alt="진행 중인 `iss53` 브랜치" style="zoom:50%;" />
+
+<img src="https://git-scm.com/book/en/v2/images/basic-branching-4.png" alt="`master` 브랜치에서 갈라져 나온 hotfix 브랜치" style="zoom:50%;" />
+
+<img src="https://git-scm.com/book/en/v2/images/basic-branching-5.png" alt="Merge 후 `hotfix` 같은 것을 가리키는 `master` 브랜치" style="zoom:50%;" />
 
