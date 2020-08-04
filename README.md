@@ -104,3 +104,33 @@ Date:   Tue Aug 4 22:43:37 2020 +0900
     Create initial Project
 ```
 
+
+
+## 커밋 되돌리기
+
+### 되돌리기
+
+
+
+​	Command : `git commit --amend`
+
+* 한 번 되돌리면 복구 할 수 없기 때문에 주의!!!
+* 시점.
+  * 너무 일찍 커밋.
+  * 어떤 파일 빼먹고 커밋.
+  * 메시지 잘못 적었을 때
+  * etc......
+* 파일 수정 -> staging area에 추가 -> --amend 옵션으로 commit
+
+예시)  2번째 커밋으로 첫번째 커밋을 덮어쓴다.
+
+```
+$ git commit -m 'initial commit'
+$ git add forgotten_file
+$ git commit --amend
+```
+
+
+
+
+
