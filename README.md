@@ -71,10 +71,36 @@ $ git status
 ​	Command : `git diff`
 
 * 어떤 내용이 변경됐는지 자세히 확인할 수 있다.
+* 수정하고 아직 Stage 하지 않은 것을 보여줌.
 
 ## gitignore 파일
 
 ​	디렉토리 안에 .gitignore 파일 참조.
 
 
+
+## 커밋 히스토리 조회하기
+
+
+
+​	Command : `git log`
+
+예시)
+
+```
+$ git log
+commit cac6b5274795f2e2a3d60173a8f0d780c83fdec6 (HEAD -> master, origin/master)
+Author: YongCheol Lee <dydcjf8889@gmail.com>
+Date:   Tue Aug 4 23:25:41 2020 +0900
+
+    write staged and unstaged on README
+
+    tracked 상태에 대해 확인 및 변경 내용 보는 방법을 적음
+
+commit ab33a71829123264b0859a54657f3f86d0a42434
+Author: YongCheol Lee <dydcjf8889@gmail.com>
+Date:   Tue Aug 4 22:43:37 2020 +0900
+
+    Create initial Project
+```
 
