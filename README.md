@@ -132,5 +132,112 @@ $ git commit --amend
 
 
 
+### 파일 상태를 Unstage로 변경하기
+
+* Staging Area와 워킹 디렉토리 사이.
+* 합쳐서 staging 한것을 따로 staging하고 싶을 때.. 등 사용.
+  * 아래의 예시를 보면 `git reset HEAD <file> to unstage` comment가 보인다.
+
+예시)
+
+```
+$ git add *
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+    renamed:    README.md -> README
+    modified:   CONTRIBUTING.md
+    
+-------------------------------------------------------------
+$ git reset HEAD CONTRIBUTING.md
+Unstaged changes after reset:
+M	CONTRIBUTING.md
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+    renamed:    README.md -> README
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+    modified:   CONTRIBUTING.md
+```
+
+### Modified 파일 되돌리기
+
+* 수정된 파일을 **최근 커밋된 버전**으로 되돌리는 방법.
+* `git checkout -- <file>` 명령어를 사용할 조심해야한다!!!!
+  * 수정된 내용이 전부 사라짐!!!!
+
+예시)
+
+```
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+    modified:   CONTRIBUTING.md
+------------------------------------------------------------------
+$ git checkout -- CONTRIBUTING.md
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+    renamed:    README.md -> README
+```
+
+
+
+## 리모트 저장소
+
+### 리모트 저장소 확인하기
+
+
+
+​	Command : `git remote`
+
+* 현재 프로젝트에 등록된 리모트 저장소를 확인할 수 있다.
+  * 리모트 저장소의 단축 이름을 보여준다.
+
+예시)
+
+```
+$ git remote -v
+origin  https://github.com/blowle/GitUsage.git (fetch)
+origin  https://github.com/blowle/GitUsage.git (push)
+```
+
+
+
+### 리모트 저장소 추가, pull or fetch, push 및 살펴보기
+
+
+
+​	Command : `git remote add <단축이름> <url>`
+
+​	Commaned : `git fetch <remote>`
+
+​	Command : `git push <remote 저장소 이름> <브랜치 이름>`
+
+​	Command : `git remote show <리모트 저장소 이름>`
+
+
+
+## 
+
+
+
+
+
+
+
+
+
 
 
