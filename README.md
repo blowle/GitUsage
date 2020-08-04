@@ -229,9 +229,20 @@ origin  https://github.com/blowle/GitUsage.git (push)
 
 
 
-## 
+## Git Branch
+
+### 새 브랜치 생성
+
+* 브랜치를 생성했을 때, 최근 마지막 커밋을 가리킨다.
+
+예시) testing 이라는 브랜치를 생서했을 때,
+
+## ![한 커밋 히스토리를 가리키는 두 브랜치](https://git-scm.com/book/en/v2/images/two-branches.png)
 
 
+
+* Git은 지금 작업중인 브랜치를 `HEAD` 라는 특수한 포인터로 파악한다.
+  * 지금 작업하는 로컬 브랜치를 카리킨다.
 
 
 
